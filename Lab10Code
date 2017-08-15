@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int userNumOne = 0;
+    int userNumTwo = 0;
+    int i = 1; //Set iteration to 1
+    int leastCommonMultiple = 0;
+
+    //Prompt user for two numbers
+    //Number 1
+    cout << "Enter a number: ";
+    cin >> userNumOne;
+    cout << userNumOne;
+    cout << endl;
+    //Number 2
+    cout << "Enter another number: ";
+    cin >> userNumTwo;
+    cout << userNumTwo;
+    cout << endl;
+    
+    //If user enters negative numbers
+    if (userNumOne < 1 || userNumTwo < 1) {
+       cout << "Please enter positive numbers and run again.";
+       cout << endl;
+       return 0;
+    }
+
+   //While loop that fires until finding LCM
+    while (i % userNumOne != 0 || i % userNumTwo != 0){
+        if ( i == 100) {
+            cout << i << "? no. Gave up! ";
+            break;
+        } else {
+            cout << i << "? no. ";
+            i = i + 1;
+        }
+    }
+    if ( i < 100 ){
+      cout << i << "? yes!";
+    }
+        
+    
+    return 0;
+
+}

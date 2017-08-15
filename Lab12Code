@@ -1,0 +1,45 @@
+#include <iostream>
+using namespace std;
+
+double payoff(double loan, double payment, double interest){
+    
+    double balance = loan;
+    int months = 1;
+    double placeholder = 0.00;
+    double monthlyInterestRate = interest / 12;
+    cout << "Interest rate per month is " << monthlyInterestRate << endl;
+
+    while (months <= 360 ) {
+        if(months >= 360 ) {
+            cout << "Report was stopped, does not seem to end." << endl;
+            break;
+        }
+        if (balance <= payment ){
+            cout << "Last payment: " << balance << endl;
+            return months;
+        }
+        cout << "Mon: " << months << " Bal: " << balance << " Int:" << (monthlyInterestRate * balance) / 100  << " - Pay:" <<  payment << endl;
+        placeholder = (monthlyInterestRate * balance) / 100;
+        balance = balance + placeholder - payment;
+        months++;
+    }
+}
+
+int main() {
+double loan, payment, interest; cout.setf(ios::fixed, ios::floatfield); cout.precision(2);
+cout << "Please enter loan amount: "; cin >> loan;
+cout << loan << endl;
+cout << "Please enter monthly payment: ";
+cin >> payment;
+cout << payment << endl;
+cout << "Please enter annual interest: ";
+cin >> interest;
+cout << interest << endl;
+int numMonths = payoff(loan, payment, interest);
+
+if (numMonths != -1) {
+      cout << "It will take " << numMonths;
+      cout << " months to pay off the loan." << endl;
+   }
+   return 0; 
+}

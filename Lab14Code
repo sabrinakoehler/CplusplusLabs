@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+   int myArray[6];    //User numbers in array set
+   int i = 0;        //Loop index
+   int j = 0;        //Loop to check for duplicates
+   int oldValue = 0;    //Store original array for loop
+   int newValue = 0; 
+
+   // code to fill in the array from the user
+   for (i = 0; i < 6; ++i) {
+      cout << "enter a number: ";
+      cin >> myArray[i];
+      cout << myArray[i] << endl;
+   }
+   // code to determine if all of the values are unique
+   for (i = 0; i < 6; i++) {
+      oldValue = myArray[i];
+      for (j = i + 1; j < 6; j++) {
+         if (oldValue == myArray[j]) {
+            newValue = 1;
+         }
+      }
+   }
+   if (newValue == 1) {
+      cout << "Not all unique!" << endl;
+   }
+   else {
+      cout << "All unique!";
+   }
+   
+return 0;
+}

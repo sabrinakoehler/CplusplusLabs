@@ -1,0 +1,63 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+
+   int secret = -1, guess, flag = 0, count = 0;
+
+   while ((secret < 0) || (secret > 10)) {
+
+      if (count > 0)
+
+         cout << "Out of bounds!" << endl;
+
+      cin >> secret;
+
+      count++;
+
+   }
+
+   cout << "I am thinking of a number between 1 and 10." << endl;
+
+   cout << "Can you guess it within 3 guesses?" << endl;
+
+   int x = 0;
+
+   while ((x < 3) && (flag == 0)) {
+
+      cout << "Enter guess #" << x+1 << ": ";
+
+      cin >> guess;
+
+      cout << guess << endl;
+
+      if ((guess < 1) || (guess > 10)) {
+
+        cout << "Try again!" << endl;
+
+        x--;
+
+      }
+
+      if (guess == secret) {
+
+         cout << "You win!" << endl;
+
+         flag = 1;
+
+      }
+
+      x++;
+
+   }
+
+   if (flag == 0)
+
+      cout << "You lose! The number was " << secret << endl;
+
+      
+
+   return 0;
+
+}

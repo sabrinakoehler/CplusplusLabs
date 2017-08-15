@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+   
+   cout << "         " << "\\" << "|" << "|" << "|" << "/" << endl;
+   cout << "         " << "(" << "o" << " " << "o" << ")" << endl;
+   cout << "|" << "~~~~" << "ooO" << "~~" << "(" << "_" << ")" << "~~~~~~~" << "|" << endl;
+   cout << "|" << " " << "Please" << "            " << "|" << endl;
+   cout << "|" << " " << "don't feed the" << "    " << "|" << endl;
+   cout << "|" << " " << "TROLLS" << " " << "!" << "          " << "|" << endl;
+   cout << "|" << "~~~~~~~~~~~~~~" << "Ooo" << "~~" << "|" << endl;
+   cout << "        " << "|__|" << "__|" << "      " << endl;
+   cout << "         " << "|" << "|" << " " << "|" << "|" << "  " << endl;
+   cout << "        " << "ooO" << " " << "Ooo" << "      " << endl;
+   
+   return 0;
+}

@@ -1,0 +1,34 @@
+#include <iostream>
+// YOUR CODE GOES BELOW HERE
+
+//Library to use square root operation
+#include <cmath> 
+using namespace std;
+
+double distance(int x1, int y1, int x2, int y2) {
+   //Store value of calculated distance in variable
+   double distanceCalc = 0.0;
+   //Distance = Sqrt( (x2-x1)^2 + (y2-y1)^2 )
+   distanceCalc = sqrt(pow((x1-x2),2) + pow((y1-y2),2));
+}
+
+// TO HERE
+// DO NOT CHANGE ANYTHING BELOW HERE
+int main() {
+   double x1, y1, x2, y2;
+   cout << "Enter x1: ";
+   cin >> x1;
+   cout << x1 << endl;
+   cout << "Enter y1: ";
+   cin >> y1;
+   cout << y1 << endl;
+   cout << "Enter x2: ";
+   cin >> x2;
+   cout << x2 << endl;
+   cout << "Enter y2: ";
+   cin >> y2;
+   cout << y2 << endl;
+   cout << "The distance is ";
+   cout << distance(x1, y1, x2, y2) << endl;
+   return 0;
+ }

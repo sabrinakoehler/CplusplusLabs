@@ -1,0 +1,57 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    // variables
+    float costofHouse = 0;
+    float totalLoan = 0;
+    float downPayment = 0;
+    float interest = 0;
+    float interestPayment = 0;
+    float interestRate = 0;
+    float effectiveCostInterest = 0;
+    float reducedTax = 0;
+    float incomeTaxRate = 0;
+    float propertyTax = 0;
+    float propertyTaxRate = 0;
+    float yearlyUpkeep = 0;
+    float monthlyRent = 0;
+    float costofRentYear = 0;
+    int costHouseYear = 0;
+    
+    // inputs
+   cin >> monthlyRent;      // 1500
+   cin >> costofHouse;      // 400000
+   cin >> downPayment;      // 100000
+   cin >> interestRate;     // 0.06
+   cin >> incomeTaxRate;    // 0.30
+   cin >> propertyTaxRate;  // 0.01
+   cin >> yearlyUpkeep;     // 2000
+   
+   // find cost of rent per year
+   costofRentYear = monthlyRent * 12;
+   
+   // What is the cost of the loan?
+   totalLoan = costofHouse - downPayment;
+
+   // What is the interest of the loan?
+   interest = totalLoan * interestRate;
+
+   // What is the reduced taxes on loan?
+   reducedTax = interest * incomeTaxRate;
+
+   // What is the reduced taxes on loan?
+   effectiveCostInterest = interest - reducedTax;
+
+   //  What is property tax?
+   propertyTax = costofHouse * propertyTaxRate;
+
+   costHouseYear = yearlyUpkeep + propertyTax + effectiveCostInterest;
+   
+   //Output
+   cout << "Total cost per year of renting: " << costofRentYear << endl;
+   cout << "Total cost per year of buying: " << costHouseYear << endl;
+   
+   return 0;
+}
